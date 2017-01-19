@@ -1,4 +1,4 @@
-FROM dankempster/php:7.0
+FROM dankempster/php:7.1
 
 MAINTAINER Dan Kempster <dev@dankempster.co.uk>
 
