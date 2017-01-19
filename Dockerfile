@@ -1,11 +1,8 @@
-FROM dankempster/php:5.5
+FROM dankempster/php:5.5-alpine
 
 MAINTAINER Dan Kempster <dev@dankempster.co.uk>
 
-RUN apt-get update; \
-    apt-get install -y git zip unzip --no-install-recommends; \
-    apt-get clean; \
-    rm -rf /var/lib/apt/lists/*;
+RUN apk add --update git zip unzip
 
 # Set PHP config
 COPY *.ini /usr/local/etc/php/conf.d/
