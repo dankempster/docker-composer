@@ -1,4 +1,4 @@
-FROM dankempster/php:5.5-alpine
+FROM dankempster/php:5.6-alpine
 
 MAINTAINER Dan Kempster <dev@dankempster.co.uk>
 
