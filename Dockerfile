@@ -29,5 +29,5 @@ ENV PATH $PATH:/composer/bin:/composer/home/vendor/bin
 
 VOLUME /composer /composer-cache
 
-CMD [ "/docker-entry.sh" ]
+ENTRYPOINT [ "/docker-entry.sh" ]
 
