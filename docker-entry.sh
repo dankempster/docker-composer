@@ -7,4 +7,14 @@ fi;
 if [ ! -f /composer/bin/composer.phar ]; then
     echo "ERR: composer set up failed!"
     exit 1
-fi;
+elif [ $# = 0 ]; then
+    composer list
+    exit 0
+fi
+
+# BC
+if [ "$1" = "composer" ]; then
+    eval "$*"
+fi
+
+composer $*

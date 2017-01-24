@@ -1,0 +1,12 @@
+language: php
+php:
+  - 7.1
+
+services:
+  - docker
+
+install:
+  - docker build --tag test-image .
+
+script:
+  - bash test.sh test-image
