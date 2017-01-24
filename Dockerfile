@@ -1,4 +1,4 @@
-FROM dankempster/php:7.0
+FROM dankempster/php:latest
 
 MAINTAINER Dan Kempster <dev@dankempster.co.uk>
 
@@ -32,5 +32,5 @@ ENV PATH $PATH:/composer/bin:/composer/home/vendor/bin
 
 VOLUME /composer /composer-cache
 
-CMD [ "/docker-entry.sh" ]
+ENTRYPOINT [ "/docker-entry.sh" ]
 
