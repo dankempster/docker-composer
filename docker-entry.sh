@@ -12,9 +12,4 @@ elif [ $# = 0 ]; then
     exit 0
 fi
 
-# BC
-if [ "$1" = "composer" ]; then
-    eval "$*"
-fi
-
 composer $*
