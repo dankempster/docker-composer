@@ -9,8 +9,11 @@ fi
 
 set -x
 
+# Install Composer
+docker run --rm -v composer:/composer "$1"
+
 # Test composer works
-docker run --rm -v $(pwd)/tests:/project "$1" --version
+docker run --rm -v composer:/composer -v $(pwd)/tests:/project "$1" --version
 
 # BC check - for when their wasn't an entry script
-docker run --rm -v $(pwd)/tests:/project "$1" composer --version
+docker run --rm -v composer:/composer -v $(pwd)/tests:/project "$1" composer --version
